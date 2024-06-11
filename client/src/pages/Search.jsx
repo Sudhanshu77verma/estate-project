@@ -56,7 +56,11 @@ console.log(sideBardata)
     sort : sortFromUrl || 'created_at',
     order:orderfromUrl || 'desc',
   })
-      }
+     
+
+   }
+
+
       const fetchListing = async()=>{
         setloading(true);
         const searchQuery=UrlParams.toString();
@@ -94,7 +98,7 @@ const onshowMoreHandleclick = async()=>{
 
   // console.log(sideBardata)
   const handleChange=(e)=>{
-    if(e.target.id ==='all' || e.target.id ==='rent' || e.target.id ==='sale')
+    if(e.target.id === 'all' || e.target.id ==='rent' || e.target.id ==='sale')
     {
       setsidebardata({...sideBardata,type:e.target.id})
     }
@@ -112,6 +116,7 @@ const onshowMoreHandleclick = async()=>{
     const order =e.target.value.split('_')[1] || 'desc';
     setsidebardata({...sideBardata,sort,order});
    }
+
   }
   const handleSubmit=(e)=>{
     e.preventDefault();
